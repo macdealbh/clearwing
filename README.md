@@ -88,6 +88,26 @@ Requirements: Python 3.10+, a recent Rust toolchain for the native
 sanitizer-image sandbox features. If the install fails with a Rust version
 error, run `rustup update stable`.
 
+## Codespaces (iPad-friendly setup)
+
+This repo includes a ready-to-use devcontainer in `.devcontainer/` so you can
+develop from GitHub Codespaces (including Safari on iPad) without local setup.
+
+When a Codespace starts, it automatically:
+
+- installs `uv` (if needed),
+- runs `uv sync --all-extras` to create `.venv`,
+- installs Rust and Docker-outside-of-Docker support,
+- installs Playwright Chromium dependencies.
+
+After startup:
+
+```bash
+uv run clearwing doctor
+uv run make lint
+uv run make test
+```
+
 ## Quickstart
 
 ```bash
