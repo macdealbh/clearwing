@@ -5,8 +5,7 @@
     "ghcr.io/devcontainers/features/rust:1": {
       "profile": "default",
       "version": "stable"
-    },
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    }
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
